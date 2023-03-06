@@ -9,31 +9,31 @@
 </head>
 <body>
     <form action="">
-       <h2>SỞ THÍCH CỦA BẠN</h2>
        <table>
             <tr>
-                    <td>Họ và tên</td>
+                <th colspan="4">SỞ THÍCH CỦA BẠN</th>
+            </tr>
+            <tr>
+                    <td style="color: blue;">Họ và tên</td>
                     <td>
                         <input type="text" name="yourname">
                     </td>
             </tr>
             <tr>
-                <td>Email</td>
+                <td style="color: blue;">Email</td>
                 <td>
                 <input type="text" name="email">
                 </td>
             </tr>
-        </table>
-
-        <table>
             <tr>
-                <td rowspan="2">Sở thích </td>
+                <td style="color: blue;" rowspan="2">Sở thích </td>
                 <td><input type="checkbox" name="hobby"> Thể thao</td>
                 <td><input type="checkbox" name="hobby"> Âm nhạc</td>
-                <td><input type="checkbox" name="hobby"> Đọc sách <br></td>
+                <td><input type="checkbox" name="hobby"> Đọc sách</td>
             </tr>
            <tr>
                 <td><input type="checkbox" name="hobby"> Chơi game</td>
+                <td><input type="checkbox" name="hobby"> Lướt web</td>
                 <td><input type="checkbox" name="hobby"> Điện ảnh</td>             
             </tr>
             <tr>
@@ -43,6 +43,40 @@
         </table>
         
         <input type="submit" value="Gửi thông tin">
+        <input type="reset" value="Nhập lại">
+    </form>
+<br>
+<br>
+<br>
+
+    <form action="">
+        <h2>ĐĂNG KÝ HỌC VIÊN</h2>
+        <label for="">Họ và tên</label> 
+        <input type="text" name="name"><br> <br>
+
+        <label for="">Ngày sinh</label>
+        <input type="text" name="birth"><br> <br>
+
+        <label for="">Giới tính</label>
+        <input type="radio" name="rd"> Nam
+        <input type="radio" name="rd"> Nữ <br> <br>
+
+        <label for="">Địa chỉ</label>
+        <textarea name="address" id="" cols="50" rows="5"></textarea> <br><br>
+
+        <label for="">Lớp</label>
+        <select name="" id="">
+            <option value="">--Chọn lớp--</option>
+            <option value=""></option>
+            <option value=""></option>
+        </select><br><br>
+        <label for="">Email</label>
+        <input type="text" name="email"><br> <br>
+
+        <label for="">Điện thoại</label>
+        <input type="text" name="phone"><br> <br>
+
+        <input type="submit" value="Đăng ký">
         <input type="reset" value="Nhập lại">
     </form>
 </body>
