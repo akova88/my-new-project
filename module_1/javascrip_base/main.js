@@ -34,14 +34,25 @@
 
 // document.write('Diện tích Area=' + area);
 
-let a = prompt('Nhap so a:',);
-let b = prompt('Nhap so b',);
+// let a = prompt('Nhap so a:',);
+// let b = prompt('Nhap so b',);
  
 
- function divisor() {
-    let c = a % b;
-    if (c == 0) {
-    alert('a la boi so cua b');
-} else {alert('a ko phai la boi so cua b');}
-}
-divisor(a,b);
+//  function divisor() {
+//     let c = a % b;
+//     if (c == 0) {
+//     alert('a la boi so cua b');
+// } else {alert('a ko phai la boi so cua b');}
+// }
+// divisor(a,b);
+
+/** Viết ứng dụng tính diện tích hình chữ nhật 
+
+let inputWidth = prompt('Enter the width:');
+let inputHeight = prompt('Enter the height:');
+let width = parseInt(inputWidth);
+let height = parseInt(inputHeight);
+
+let area = width * height;
+document.write("The area is:" + area);
+*/
