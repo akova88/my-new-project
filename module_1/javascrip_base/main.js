@@ -84,7 +84,7 @@ let doC = parseInt(inputNhietdo);
 let doF = (9 * doC) / 5 + 32;
 
 document.write('Độ F là:' + doF);
-*/
+
 
 // Bài 3: Viết chương trình tính diện tích hình tròn
 
@@ -94,3 +94,27 @@ let radius = parseInt(inputRadius);
 let area = radius * radius * Math.PI;
 
 document.write('Diện tích hình tròn là:' + area);
+
+*/
+
+// Hàm chuyển đổi tiền tệ
+function changeMoney() {
+   
+let Amount = document.getElementById('amount').value;
+let f = document.getElementById("fromC").value;
+let to = document.getElementById('toC').value;
+let ketqua;
+
+    if (f == "VND" && to == "USD") {
+        ketqua = Amount / 23000 + "$";
+    } else if (f == "USD" && to == "VND") {
+        ketqua = Amount * 23000 + "Đ";
+    } else if (f == "VND") {
+        ketqua = Amount + "Đ";
+    } else {
+        ketqua = Amount + "$"
+    }
+
+document.write('Kết quả là:' + ketqua);
+}
+

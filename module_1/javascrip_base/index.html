@@ -7,9 +7,43 @@
     <title>Javascrip Basic</title>
 </head>
 <body>
-    <!-- <div id="messegeDiv"></div> -->
+    <!-- <div id="messegeDiv"></div> 
     <button type="button" onclick="showMessage();">Click me!</button>
+        -->
 
+    <!-- Ứng dụng chuyển đổi tiền tệ -->
+    <form action="">
+        <table>
+            <tbody>
+                <tr>
+                    <th>Amount</th>
+                    <th>From Currency</th>
+                    <th>To Currency</th>
+                    <th></th>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="text" id="amount">
+                    </td>
+                    <td>
+                        <select name="" id="fromC">
+                            <option value="VND">VND</option>
+                            <option value="USD">USD</option>
+                        </select>
+                    </td>
+                    <td>
+                        <select name="" id="toC">
+                            <option value="VND">VND</option>
+                            <option value="USD">USD</option>
+                        </select>
+                    </td>
+                    <td>
+                        <button type ="button"onclick="changeMoney()" >Convert</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
     <script src="main.js"></script>
 </body>
 </html>
