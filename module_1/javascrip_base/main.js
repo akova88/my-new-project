@@ -56,3 +56,41 @@ let height = parseInt(inputHeight);
 let area = width * height;
 document.write("The area is:" + area);
 */
+
+/**Thực hành khai báo và sử dụng biến 
+// Bài 1: Tính điểm trung bình
+
+let inputDiemly = prompt('Nhập điếm môn Lý:');
+let inputDiemhoa = prompt('Nhập điểm môn Hóa:');
+let inputDiemsinh = prompt('Nhập điểm môn Sinh:');
+
+let diemly = parseInt(inputDiemly);
+let diemhoa = parseInt(inputDiemhoa);
+let diemsinh = parseInt(inputDiemsinh);
+
+let sumDiem = diemhoa + diemly + diemsinh;
+let diemTb = sumDiem / 3;
+
+document.write("Tổng điểm các môn học là:" + sumDiem);
+document.write("</br>");
+document.write("Điểm trung bình các môn học là:" + diemTb);
+
+
+// Bài 2: Viết chương trình đổi độ C ra độ F
+
+let inputNhietdo = prompt('Nhập giá trị độ C:');
+let doC = parseInt(inputNhietdo);
+
+let doF = (9 * doC) / 5 + 32;
+
+document.write('Độ F là:' + doF);
+*/
+
+// Bài 3: Viết chương trình tính diện tích hình tròn
+
+let inputRadius = prompt('Nhập bán kính hình tròn:');
+let radius = parseInt(inputRadius);
+
+let area = radius * radius * Math.PI;
+
+document.write('Diện tích hình tròn là:' + area);
