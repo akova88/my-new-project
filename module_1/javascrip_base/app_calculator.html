@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>APP CALCULATOR</title>
+    <link rel="stylesheet" href="app_calculator.css">
+</head>
+<body>
+    <table>
+        <tbody>
+            <tr>
+                <th colspan="7">
+                    <input type="text" class="display-box" id="result" value="0" disabled>
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    <input type="button" value="Rad">
+                </td>
+                <td>
+                    <input type="button" value="Deg">
+                </td>
+                <td>
+                    <input type="button" value="x!">
+                </td>
+                <td>
+                    <input type="button" value="(" >
+                </td>
+                <td>
+                    <input type="button" value=")">
+                </td>
+                <td>
+                    <input type="button" value="%">
+                </td>
+                <td>
+                    <input type="button" value="AC" onclick="clearScreen()">
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <input type="button" value="Inv">
+                </td>
+                <td>
+                    <input type="button" value="sin">
+                </td>
+                <td>
+                    <input type="button" value="In">
+                </td>
+                <td>
+                    <input type="button" onclick="display('7')" value="7" >
+                </td>
+                <td>
+                    <input type="button" onclick="display('8')" value="8" >
+                </td>
+                <td>
+                    <input type="button" onclick="display('9')" value="9" >
+                </td>
+                <td>
+                    <input type="button" value="/" onclick="display('/')">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="button" value="pi">
+                </td>
+                <td>
+                    <input type="button" value="cos">
+                </td>
+                <td>
+                    <input type="button" value="log">
+                </td>
+                <td>
+                    <input type="button" onclick="display('4')" value="4" >
+                </td>
+                <td>
+                    <input type="button" onclick="display('5')" value="5" >
+                </td>
+                <td>
+                    <input type="button" onclick="display('6')" value="6" >
+                </td>
+                <td>
+                    <input type="button" value="*" onclick="display('*')">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="button" value="e">
+                </td>
+                <td>
+                    <input type="button" value="tan">
+                </td>
+                <td>
+                    <input type="button" value="can">
+                </td>
+                <td>
+                    <input type="button" onclick="display('1')" value="1" >
+                </td>
+                <td>
+                    <input type="button" onclick="display('2')" value="2" >
+                </td>
+                <td>
+                    <input type="button" onclick="display('3')" value="3" >
+                </td>
+                <td>
+                    <input type="button" value="-" onclick="display('-')">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="button" value="Ans">
+                </td>
+                <td>
+                    <input type="button" value="EXP">
+                </td>
+                <td>
+                    <input type="button" value="xY">
+                </td>
+                <td>
+                    <input type="button" onclick="display('0')" value="0" >
+                </td>
+                <td>
+                    <input type="button" onclick="display('.')" value="." >
+                </td>
+                <td>
+                    <input type="button" value="=" onclick="calculator()">
+                </td>
+                <td>
+                    <input type="button" value="+" onclick="display('+')">
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+
+    <script src="app-calculator.js"></script>
+</body>
+</html>

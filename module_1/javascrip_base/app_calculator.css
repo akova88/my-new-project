@@ -1,0 +1,21 @@
+table {
+    border: 1px solid;
+   
+}
+td{
+    width: 60px;
+    height: 40px
+}
+td input{
+    width: 100%;
+    height: 100%;
+}
+
+.display-box {
+    width: 600px;
+    height: 40px;
+    font-size: 30px;
+    padding-right: 5px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: white;
+}
