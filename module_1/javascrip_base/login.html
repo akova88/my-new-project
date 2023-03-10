@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<body>
+    <script>
+        let name = prompt('Please Input name:');
+
+        if (name == 'Admin') {
+            let pw = prompt('Please Input passworld:');
+            if (pw == 'TheMaster') {
+                alert('Welcome!');
+            } else if (pw == "") {
+                alert('Canceled.');
+            } else {
+                alert('Wrong passworld');
+            }
+        } else if (name == "") {
+            alert('Canceled.');
+        } else {
+            alert('I dont know you')
+        }
+    </script>
+</body>
+</html>
