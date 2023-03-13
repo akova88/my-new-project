@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ball move</title>
+    <style>
+        #ball {
+            width: 150px;
+            height: 150px;
+            overflow: visible;
+        }
+
+        button {
+            width: 120px;
+            height: 40px;
+            background-color: #f23d97;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            box-shadow: 0 5px 0 #8c2e6e;
+            transition: .3s;
+        }
+
+        button:active {
+            box-shadow: none;
+            transform: translateY(5px);
+        }
+
+        .test {
+            left: 0;
+            top: 0;
+            position: relative;
+        }
+    </style>
+</head>
+
+<body>
+    <img id="ball" class="test" src="https://upload.wikimedia.org/wikipedia/commons/6/6e/Football_%28soccer_ball%29.svg" alt="" style="left: 0;top:0px;
+    top: 0;
+    position: relative;">
+    <p>Click button below to move the image to right</p>
+    <button type="button" onclick="moveRight()">Click me</button>
+
+    <script>
+
+        var w = window.innerWidth - 212;
+        var h = window.innerHeight;
+        //    let img = document.getElementById('ball');
+        console.log(w);
+        var angle = 5;
+        var step = 10;
+        function moveRight() {
+    
+            let img = document.getElementById('ball');
+            if(parseInt(img.style.left)<=w){
+            img.style.left = parseInt(img.style.left) + step + 'px';
+            img.style.transition = '.5s';
+            img.style.transform = `rotate(${angle += step}deg)`;
+            // img.style.transform = 'rotate(' + (angle += step) + 'deg)';
+            }
+
+        }
+
+        function moveDown() {
+            let img = document.getElementById('ball');
+            img.style.top = parseInt(img.style.top) + step + 'px';
+            img.style.transition = '.5s';
+            img.style.transform = `rotate(${angle += step}deg)`;
+            // img.style.transform = 'rotate(' + (angle += step) + 'deg)';
+
+        }
+
+        function moveLeft() {
+            let img = document.getElementById('ball');
+            if(parseInt(img.style.left)>=0){
+
+            img.style.left = parseInt(img.style.left) - step + 'px';
+            img.style.transition = '.5s';
+            img.style.transform = `rotate(${angle -= step}deg)`;
+            // img.style.transform = 'rotate(' + (angle += step) + 'deg)';
+            }
+        }
+
+        function moveUp() {
+            let img = document.getElementById('ball');
+            if(parseInt(img.style.top)>=0){
+
+            img.style.top = parseInt(img.style.top) - step + 'px';
+            img.style.transition = '.5s';
+            img.style.transform = `rotate(${angle -= step}deg)`;
+            // img.style.transform = 'rotate(' + (angle += step) + 'deg)';
+            }
+        }
+        document.addEventListener('keydown', controlBall);
+
+        function controlBall(e) {
+            // console.log(e.keyCode);
+            if (e.keyCode == 39) {
+                moveRight();
+            }
+            if (e.keyCode == 37) {
+                moveLeft()
+            }
+            if (e.keyCode == 40) {
+                moveDown()
+            }
+            if (e.keyCode == 38) {
+                moveUp();
+            }
+        }
+    </script>
+</body>
+
+</html>
