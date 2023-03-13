@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IBM Index</title>
+</head>
+<body>
+    <form action="">
+        <h1>Tính chỉ số cân nặng</h1>
+    Nhập cân nặng: (kg)
+    <input type="text" name="" id="weigth"> <br> <br>
+    Nhập chiều cao: (m)
+    <input type="text" name="" id="height"> <br> <br>
+    <input type="button" value="Kiểm tra" onclick="kiemTra()">
+    </form>
+    <p id="result"></p>
+    
+
+    <script>
+        
+        function kiemTra() {
+        let cannang = document.getElementById('weigth').value;
+        let chieucao = document.getElementById('height').value;
+        let ibm;
+        let result = '';
+        ibm = cannang / (chieucao**=2);
+        
+        if (ibm < 18.5) {
+            result = 'Underweight';
+        } else if (ibm < 25) {
+            result = 'Normal';
+        } else if (ibm < 30) {
+            result = 'Overweight';
+        } else result = 'Obese';
+        document.getElementById('result').innerText = 'Chỉ số IBM là: ' + ibm + ' .Bạn ' + result;
+
+    }
+
+    </script>
+</body>
+</html>
