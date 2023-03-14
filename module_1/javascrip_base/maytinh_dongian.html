@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Máy tính đơn giản</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            box-sizing: border-box;
+        }
+        table {
+            margin: 10px;
+            border: 1px solid black;
+            width: 300px;
+            height: 150px;
+            text-align: center;
+        }
+        td input {
+            width: 90%;
+            height: 50px;
+            margin: 10px;
+            
+        }
+
+        button {
+            width: 50px;
+            height: 40px;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tbody>
+            <tr>
+                <td colspan="4">
+                    <input type="text" name="display-box" id="result">
+                </td>
+            </tr>
+            <tr>
+                <td><button id="1" value="1" onclick="display(this.value)">1</button></td>
+                <td><button id="2" value="2" onclick="display(this.value)">2</button></td>
+                <td><button id="3" value="3" onclick="display(this.value)">3</button></td>
+                <td><button id="+" value="+" onclick="display(this.value)">+</button></td> 
+            </tr> 
+            <tr>
+                <td><button id="4" value="4" onclick="display(this.value)">4</button></td>
+                <td><button id="5" value="5" onclick="display(this.value)">5</button></td>
+                <td><button id="6" value="6" onclick="display(this.value)">6</button></td>
+                <td><button id="-" value="-" onclick="display(this.value)">-</button></td> 
+            </tr> 
+            <tr>
+                <td><button id="7" value="7" onclick="display(this.value)">7</button></td>
+                <td><button id="8" value="8" onclick="display(this.value)">8</button></td>
+                <td><button id="9" value="9" onclick="display(this.value)">9</button></td>
+                <td><button id="*" value="*" onclick="display(this.value)">*</button></td> 
+            </tr> 
+            <tr>
+                <td><button id="AC" value="AC" onclick="clearScreen()">AC</button></td>
+                <td><button id="0" value="0" onclick="display(this.value)">0</button></td>
+                <td><button id="=" value="=" onclick="calculator()">=</button></td>
+                <td><button id="/" value="/" onclick="display(this.value)">/</button></td> 
+            </tr> 
+        </tbody>
+    </table>
+
+<script src="app-calculator.js"></script>
+</body>
+</html>

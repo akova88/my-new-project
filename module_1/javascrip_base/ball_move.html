@@ -57,7 +57,7 @@
             let img = document.getElementById('ball');
             if(parseInt(img.style.left)<=w){
             img.style.left = parseInt(img.style.left) + step + 'px';
-            img.style.transition = '.5s';
+            img.style.transition = '.1s';
             img.style.transform = `rotate(${angle += step}deg)`;
             // img.style.transform = 'rotate(' + (angle += step) + 'deg)';
             }
@@ -67,7 +67,7 @@
         function moveDown() {
             let img = document.getElementById('ball');
             img.style.top = parseInt(img.style.top) + step + 'px';
-            img.style.transition = '.5s';
+            img.style.transition = '.1s';
             img.style.transform = `rotate(${angle += step}deg)`;
             // img.style.transform = 'rotate(' + (angle += step) + 'deg)';
 
@@ -78,7 +78,7 @@
             if(parseInt(img.style.left)>=0){
 
             img.style.left = parseInt(img.style.left) - step + 'px';
-            img.style.transition = '.5s';
+            img.style.transition = '.1s';
             img.style.transform = `rotate(${angle -= step}deg)`;
             // img.style.transform = 'rotate(' + (angle += step) + 'deg)';
             }
@@ -89,7 +89,7 @@
             if(parseInt(img.style.top)>=0){
 
             img.style.top = parseInt(img.style.top) - step + 'px';
-            img.style.transition = '.5s';
+            img.style.transition = '.1s';
             img.style.transform = `rotate(${angle -= step}deg)`;
             // img.style.transform = 'rotate(' + (angle += step) + 'deg)';
             }

@@ -1,10 +1,12 @@
+
+
 table {
     border: 1px solid;
    
 }
 td{
     width: 60px;
-    height: 40px
+    height: 40px;
 }
 td input{
     width: 100%;
