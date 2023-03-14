@@ -12,24 +12,85 @@
             position: relative;
             top: 0;
             left: 0;
-            height: 100px;
-            width: 80px;
+            height: 200px;
+            width: 150px;
         }
     </style>
 </head>
 
-<body>
+<body id="body">
     <img id="nobita" src="https://upload.wikimedia.org/wikipedia/vi/2/2c/Nobita.png" alt=""
         onmouseover="moveRight()">
 
     <script>
         var step = 5;
+        var i = 1;
+
+        function createNobita() {
+            var img = document.createElement('img');
+            img.src ='https://upload.wikimedia.org/wikipedia/vi/2/2c/Nobita.png';
+            img.id = `img_${i++}`;
+            // document.getElementById('body').appendChild(img);
+            var parentElement = document.getElementById('body');
+            var targetElement = document.getElementById('nobita');
+            parentElement.insertBefore(img, targetElement);
+
+            img.style.position = 'absolute';
+            img.style.height = '200px';
+            img.style.width = '150px';
+            img.style.left = 2.5*i++ + 'px';
+        }
 
         function moveRight() {
             let img = document.getElementById('nobita');
             let css = getComputedStyle(img);
             nobita.style.left = parseInt(css.left) + step + 'px';
+            img.style.transition = '.10s';
+            createNobita();
+
+            
         }
+        function moveLeft() {
+            let img = document.getElementById('nobita');
+            let css = getComputedStyle(img);
+            nobita.style.left = parseInt(css.left) - step + 'px';
+            
+        }
+        function moveTop() {
+            let img = document.getElementById('nobita');
+            let css = getComputedStyle(img);
+            nobita.style.top = parseInt(css.top) - step + 'px';
+            createNobita();
+
+        }
+        function moveDown() {
+            let img = document.getElementById('nobita');
+            let css = getComputedStyle(img);
+            nobita.style.top = parseInt(css.top) + step + 'px';
+            createNobita();
+
+        }
+
+        document.addEventListener('keydown',controlNobita);
+
+    function controlNobita(e) {
+        switch (e.keyCode) {
+            case 37:
+                moveLeft();
+                break;
+            case 38:
+                moveTop();
+                break;
+            case 39:
+                moveRight();
+                break;
+            case 40:
+                moveDown();
+                break;
+        }
+    }
+        
+
     </script>
 </body>
 
