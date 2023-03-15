@@ -45,8 +45,8 @@
             let img = document.getElementById('nobita');
             let css = getComputedStyle(img);
             nobita.style.left = parseInt(css.left) + step + 'px';
-            img.style.transition = '.10s';
-            createNobita();
+            img.style.transition = '.1s';
+            // createNobita();
 
             
         }
@@ -60,14 +60,14 @@
             let img = document.getElementById('nobita');
             let css = getComputedStyle(img);
             nobita.style.top = parseInt(css.top) - step + 'px';
-            createNobita();
+            // createNobita();
 
         }
         function moveDown() {
             let img = document.getElementById('nobita');
             let css = getComputedStyle(img);
             nobita.style.top = parseInt(css.top) + step + 'px';
-            createNobita();
+            // createNobita();
 
         }
 
