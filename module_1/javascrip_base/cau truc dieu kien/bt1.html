@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IF ELSE</title>
+</head>
+
+<body>
+
+    <script>
+        /* Kiểm tra a % b
+
+        var a = prompt('Nhập số a:');
+        var b = prompt('Nhập số b:');
+        
+            if ( a % b == 0) {
+                alert('a chia hết cho b');
+            } else alert ('a ko chia hết cho b');
+    */
+
+        /* Kiểm tra đủ tuổi vào lớp 10
+        
+            var age = prompt('Nhập tuổi học sinh:');
+        
+            if ( age < 15 ) {
+                alert('Học sinh không đủ điều kiện vào lớp 10');
+            } else alert ('Học sinh đủ điều kiện vào lớp 10');
+        */
+        /* Kiểm tra số âm hay số dương
+        
+        var number = prompt('Nhập vào số nguyên:');
+            if ( number > 0) {
+                alert('Số nhập vào lớn hơn 0');      
+            } else 
+            if ( number < 0) {
+                alert('Số nhập vào bé hơn 0');
+            } else alert('Số nhập vào bằng 0');
+        
+        */
+
+        /* Nhập 3 số nguyên tìm giá trị lớn nhất
+        var a = 7, b = 6 , c = 5;
+        
+        if( a > b && a > c) {
+            alert('a là số lớn nhất');
+        }
+            if (b > a && b > c) {
+                alert('b là số lớn nhất');
+            }
+                if ( c > a && c > b) {
+                    alert('c là số lớn nhất')
+                }
+        
+        */
+
+        /*Xếp hạng học lực của học sinh
+
+        var dkt = +prompt('Nhập vào điểm kiểm tra:');
+        var dgk = +prompt('Nhập vào điểm thi giữa kỳ:');
+        var dck = +prompt('Nhập vào điểm thi cuối kỳ:');
+        var dtb = (dkt + dgk * 2 + dck * 3) / 6;
+        var kq = Math.round(dtb*100)/100;
+        console.log(kq);
+
+        if (dtb >= 8) {
+            alert(`Điểm trung bình là: ${kq}. Học lực giỏi`);
+        } else if (dtb >= 6.5) {
+            alert(`Điểm trung bình là: ${kq}. Học lực khá`);
+        } else if (dtb >= 5) {
+            alert(`Điểm trung bình là: ${kq}. Học lực trung bình`);
+        } else alert(`Điểm trung bình là: ${kq}. Học lực yếu`);
+
+*/
+
+        /*Tính hoa hồng theo doanh số
+
+        var ds = + prompt('Nhập doanh số bán hàng:');
+
+        if (ds > 1000) {
+            alert(`Hoa hồng nhận được là: ${ds * 0.05}`);
+        } else if (ds > 800) {
+            alert(`Hoa hồng nhận được là: ${ds * 0.03}`);
+        } else if (ds > 500) {
+            alert(`Hoa hồng nhận được là: ${ds * 0.02}`);
+        } else alert(`Hoa hồng nhận được là: ${ds * 0.01}`);
+
+*/
+
+        /* Tính cước điện thoại */
+
+        const phiTb = 25000;
+        var tong;
+        var phi = 0;
+        var callp = + prompt('Nhập vào số phút gọi:');
+
+        if (callp > 200) {
+            phi = (callp - 200) * 200 + 150 * 400 + 50 * 600;
+            tong = phiTb + phi;
+            alert(`Số phút gọi là:${callp}. Tiền cước: ${tong}`);
+        } else if (callp > 50) {
+            phi = (callp - 50) * 400 + 50 * 600;
+            tong = phiTb + phi;
+            alert(`Số phút gọi là:${callp}. Tiền cước: ${tong}`);
+        } else
+            phi = callp * 600
+            tong = phiTb + phi;
+            alert(`Số phút gọi là:${callp}. Tiền cước: ${tong}`);
+
+
+    </script>
+</body>
+
+</html>
