@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GFC</title>
+
+    <style>
+        table {
+            width: 300px;
+            margin: 0 auto;
+        }
+
+        table>tbody>tr>td>img {
+            width: 100%;
+            border-radius: 35%;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tbody>
+            <tr>
+                <td><img id="img1" src="image/btnOn.png" onclick="change(1)"><h1>GOOD</h1></td>
+            </tr>
+            <tr>
+                <td><img id="img2" src="image/btnOn.png" onclick="change(2)"><h1>FAST</h1></td>
+            </tr>
+            <tr>
+                <td><img id="img3" src="image/btnOff.png" onclick="change(3)"><h1>CHEAP</h1></td>
+            </tr>
+
+            <script>
+
+                function change(row) {
+                    let rd = Math.ceil(Math.random()*3);
+                    let img = document.getElementById(`img${row}`);
+
+                    while( rd==row) {
+                        rd = Math.ceil(Math.random()*3);
+                    }
+
+                    console.log(rd);
+                    let on = 'http://127.0.0.1:5500/module_1/javascrip_base/cau%20truc%20dieu%20kien/image/btnOn.png';
+                    let off = 'http://127.0.0.1:5500/module_1/javascrip_base/cau%20truc%20dieu%20kien/image/btnOff.png';
+
+                    img.src == off ? img.src = on : img.src = off;
+
+                    // if (img.src == 'http://127.0.0.1:5500/module_1/javascrip_base/cau%20truc%20dieu%20kien/image/btnOff.png') {
+                    //     img.src = 'http://127.0.0.1:5500/module_1/javascrip_base/cau%20truc%20dieu%20kien/image/btnOn.png';
+                    // } else img.src = 'http://127.0.0.1:5500/module_1/javascrip_base/cau%20truc%20dieu%20kien/image/btnOff.png';
+                            
+                    // if ( document.getElementById('img1').src == on && document.getElementById('img2').src == on && document.getElementById('img3').src == on ) {
+                    //     document.getElementById(`img${rd}`).src = off;
+                    // }    
+                    let link_Img1 = document.getElementById('img1').src;
+                    let link_Img2 = document.getElementById('img2').src;
+                    let link_Img3 = document.getElementById('img3').src;
+
+                    switch (true) {
+                        case (link_Img1 == on && link_Img2 == on && link_Img3 == on ):
+                            document.getElementById(`img${rd}`).src = off;
+                        break;
+                    }
+
+                }
+            </script>
+        </tbody>
+    </table>
+</body>
+</html>
