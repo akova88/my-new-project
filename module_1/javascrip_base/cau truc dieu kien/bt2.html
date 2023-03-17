@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cấu trúc điều kiện</title>
+</head>
+
+<body>
+
+<script>
+    /*Bài 1: Chuyển độ C thành độ F
+
+    let inputNhietdo = prompt('Nhập giá trị độ C:');
+    let doC = parseInt(inputNhietdo);
+    let doF = 32 + 9 / 5 * doC;
+    alert(`Nhiệt độ theo độ F là ${doF} F`);
+    */
+
+    /*Bài 2: Chuyển từ mét sang feet:
+
+    let inputValue = prompt('Nhập giá trị tính theo m:');
+    let value = parseInt(inputValue);
+
+    var ft = value * 3.2808;
+    alert(`Giá trị tính theo feet là: ${ft}`);
+
+*/
+
+/* Bài 3: Tính diện tích hình vuông khi biết cạnh a.
+
+    var inputA = prompt('Nhập chiều dài cạnh a:');
+        var valueA = parseInt(inputA);
+        var areaSquare = valueA ** 2;
+        alert(`Diện tích hình vuông là: ${areaSquare}`); 5
+*/
+
+/* Bài 4: Tính diện tích hình  chữ nhật khi biết 02 cạnh a, b.
+
+    var inputA = prompt('Nhập chiều dài cạnh a:');
+        var inputB = prompt('Nhập chiều dài cạnh b:');
+        var valueA = parseInt(inputA);
+        var valueB = parseInt(inputB);
+
+        var areaRectangle = valueA * valueB;
+
+        alert(`Diện tích hình chữ nhật là: ${areaRectangle}`);
+
+*/
+
+/* Bài 5: Tính diện tích tam giác vuông khi biết 02 cạnh kề a, b.
+
+var inputA = prompt('Nhập chiều dài cạnh a:');
+        var inputB = prompt('Nhập chiều dài cạnh b:');
+        var valueA = parseInt(inputA);
+        var valueB = parseInt(inputB);
+
+        var areaTriangle = valueA * valueB / 2;
+
+        alert(`Diện tích hình tam giác vuông là: ${areaTriangle}`);
+
+*/
+
+/* Bài 6: Giải phương trình bậc 1.
+
+var ipA = prompt('Nhập giá trị a:');
+var ipB = prompt('Nhập giá trị b:');
+
+var soA = parseInt(ipA);
+var soB = parseInt(ipB);
+
+if ( soA !== 0) {
+    var songhiem = -soB / soA;
+    alert(`Phương trình có nghiệm là: ${songhiem}`);
+} else if (soB == 0) {
+    alert('Phương trình vô số nghiệm ');
+} else alert('Phương trình vô nghiệm ');
+
+*/
+/* Bài 7: Giải phương trình bậc 2.
+let a = +prompt('Nhập a:');
+let b = +prompt('Nhập b:');
+let c = +prompt('Nhập c:');
+let x,x1,x2;
+
+let delta = b*b - 4*a*c;
+if ( a == 0) 
+{
+    if (b == 0 ) 
+    {
+
+        if (c == 0) 
+        {
+            alert('Phương trình vô số nghiệm');
+        }else{
+            alert('Phương trình vô nghiệm');
+            }
+    }else {
+        x = -c/b;
+        alert('Phương trình là phương trình bậc 1 có nghiệm x = ' + x);
+        }
+}else {
+    if ( delta < 0) {
+        alert('Phương trình vô nghiệm');
+    } else if ( delta ==0) {
+        x = -b / (2*a);
+        alert('Phương trình có nghiệm kép x = ' + x);
+    } else {
+        x1 = ( -b + Math.sqrt(delta)) / (2*a);
+        x2 = ( -b - Math.sqrt(delta)) / (2*a);
+        alert('Phương trình có 2 nghiệm x = ' + x1 +' và x2 = ' + x2);
+    }
+}
+*/
+
+/* Bài 8: Kiểm tra xem một số nhập vào có phải là tuổi của một người không. Một số nguyên là tuổi của một người khi nhỏ 120 và lơn hơn 0.  
+let age = +prompt('Nhập vào tuổi 1 người:');
+    do {
+        if (age > 120 || age < 0) {
+            age = +prompt('Đây ko phải là tuổi của 1 người. Nhập lại:');
+        }
+    } while (age > 120 || age < 0);
+
+    alert(`${age} là tuổi của một người`);
+    */
+
+/* Bài 9: Kiểm tra xem 3 số thực (a,b,c) nhập vào có phải là cạnh của một tam giác. Điều kiện để a,b,c là cạnh của một tam giác là:
+
+    let a = +prompt('Nhập a:');
+    let b = +prompt('Nhập b:');
+    let c = +prompt('Nhập c:');
+
+    if (a > 0 && b > 0 && c > 0) {
+        if ((a + b) > c) {
+            if ((b + c) > a) {
+                if ((a + c) > b) {
+                    alert('a,b,c là cạnh của tam giác');
+                } else alert('a,b,c ko là cạnh của tam giác');
+            } else alert('a,b,c ko là cạnh của tam giác');
+        } else alert('a,b,c ko là cạnh của tam giác');
+    } else alert('a,b,c ko là cạnh của tam giác');
+
+*/
+/* Bài 10: Viết chương trình tính giá điện.
+    let tong;
+    let cosume = + prompt('Nhập lượng điện tiêu thụ:');
+
+
+    if (cosume > 400) {
+        tong = (cosume - 400) * 2927 + 100 * 2834 + 100 * 2536 + 100 * 2014 + 50 * 1734 + 50 * 1678;
+    } else if (cosume > 300) {
+        tong = (cosume - 300) * 2834 + 100 * 2536 + 100 * 2014 + 50 * 1734 + 50 * 1678;
+    } else if (cosume > 200) {
+        tong = (cosume - 200) * 2536 + 100 * 2014 + 50 * 1734 + 50 * 1678;
+    } else if (cosume > 100) {
+        tong = (cosume - 100) * 2014 + 50 * 1734 + 50 * 1678;
+    } else if (cosume > 50) {
+        tong = (cosume - 50) * 1734 + 50 * 1678;
+    } else tong = cosume * 1678;
+
+alert('Tổng tiền điện của bạn là: ' + tong.toFixed() + ' VND');
+
+*/
+// Bài 11: Viết chương trình tính thuế thu nhập cá nhân.
+
+let salary =+ prompt('Nhập tiền lương tháng của bạn:');
+let insuSalary =+ prompt('Nhập tiền lương đóng bảo hiểm:');
+let depenPerson =+ prompt('Nhập số người phụ thuộc:');
+let insuran = insuSalary*0.08 + insuSalary*0.015 + insuSalary*0.01;
+const youSelf = 11000000;
+let giamDepen = depenPerson*4400000;
+let taxSalary = salary - insuran - youSelf - giamDepen;
+let taxPaid;
+if ( taxSalary > 80000000) {
+    taxPaid = taxSalary*0.35 - 9850000;
+} else if (taxSalary > 52000000) {
+    taxPaid = taxSalary*0.3 - 5850000;
+} else if (taxSalary > 32000000) {
+    taxPaid = taxSalary*0.25 - 3250000;
+} else if (taxSalary > 18000000) {
+    taxPaid = taxSalary*0.2 - 1650000;
+} else if (taxSalary > 10000000) {
+    taxPaid = taxSalary*0.15 - 750000;
+} else if (taxSalary > 5000000) {
+    taxPaid = taxSalary*0.1 - 250000;
+} else taxPaid = taxSalary*0.05;
+
+alert('Thuế thu nhập cá nhân phải nộp là:' + taxPaid + ' VNĐ');
+
+
+
+// Bài 12: Viết chương trình tính lãi ngân hàng (lãi mẹ đẻ lãi con) khi biết số tiền ban đầu, số tháng cho vay và lãi xuất hàng tháng.
+
+
+
+</script>
+</body>
+
+</html>
