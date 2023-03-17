@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Do you love me!</title>
+</head>
+<body>
+
+    <h1>Do you love me?</h1>
+    <button id="btn_Y" onclick="action()">Yes</button>
+    <button id="btn_N" onmouseover="move()">No</button>
+    
+
+    <script>
+        function action() {
+            alert('<3');
+        }
+        function move() {
+            var btn = document.getElementById('btn_N');
+            var css = getComputedStyle(btn);
+            btn.style.position = 'relative';
+            btn.style.left = `${(Math.random()*window.window.innerWidth-50)}px`;
+            btn.style.top = `${(Math.random()*window.innerHeight-50)}px`;
+        }
+    </script>
+</body>
+</html>
