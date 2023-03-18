@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prime Count</title>
+</head>
+<body>
+    <script>
+        let numbers = + prompt('Nhập vào số lượng số nguyên tố muốn in ra:');
+
+            function prime_Check(N) {
+
+                if (N % 2 == 0) {
+                    return false;
+                } else {
+                    for (var i = 3; i < N - 1; i += 2) {
+                        if (N % i == 0) {
+                            return false;
+                            break;
+                        }
+                    }
+                }
+                return true;
+            }
+
+            let count_SNT = 0;
+            for (let j = 2; j <= 10000; j++) {
+                if (prime_Check(j)) {
+                    document.write(j + "<br>");
+                    count_SNT++;
+                    if (count_SNT >= numbers) {
+                        break;
+                    }
+                }
+            }
+         
+    </script>
+</body>
+</html>
