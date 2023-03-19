@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luyện tập vòng lặp 01</title>
+</head>
+<body>
+
+    <script>
+        // B1: Đếm từ 1 đến 100. Khi đến số 99 hiển thị hoàn thành
+
+        // for (var i = 1; i < 100; i++) {
+        //     while ( i == 99) {
+        //         alert('Đã hoàn thành! i = ' + i);
+        //         break;
+        //     }
+        // }
+
+        /* B2: Kiểm tra nhiệt độ
+        var temp =+ prompt('Nhập vào nhiệt độ hiện tại');
+        do {
+           
+            if ( temp < 20 ) {
+            temp =+ prompt('Yêu cầu tăng nhiệt độ');
+        }
+        if ( temp > 100 ) {
+           temp =+ prompt('Yêu cầu giảm nhiệt độ');
+        }
+        } while (temp <= 100 && temp <=20);
+
+        alert('Nhiệt độ đạt yêu cầu')
+
+        // B3,4: Hiển thị ra 20 số trong dãy fibonacci đầu tiên.
+        function fibonacci(n) {
+            if ( n == 0 || n == 1) {
+                return n;
+            } else {
+                return fibonacci(n-1) + fibonacci(n-2);
+            }
+        }
+        
+        // for ( var i = 0; i < 10; i ++) {
+        //     document.write(fibonacci(i) + ' '); 
+        //     if (fibonacci(i) % 5 == 0) {
+        //         var value = fibonacci(i);
+        //     }
+        // }
+        // document.write('Số đầu tiên trong dãy Fibonacci chia hết cho 5 là: ' + value);
+
+        // B6: Tính tổng của 20 số đầu tiên trong dãy fibonacci.
+        var sum = 0;    
+        for ( var i = 0; i < 20; i++) {
+            document.write(fibonacci(i) + ' +');
+            sum += fibonacci(i);
+            }
+        document.write('=' + sum);
+        */
+
+        // B7: Viết chương trình
+
+        for ( var i = 1; i <= 100; i++) {
+            switch(true) {
+                case ( i % 3 == 0 && i % 5 == 0):
+                document.write('FizzBuzz ')
+                break;
+                case (i % 3 == 0):
+                document.write('Fizz ');
+                break;
+                case ( i % 5 == 0): 
+                document.write('Buzz ');
+                break;
+                default: 
+                document.write(i + ' ');
+            }
+        }
+    </script>
+    
+</body>
+</html>
