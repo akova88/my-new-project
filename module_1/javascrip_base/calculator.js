@@ -26,6 +26,6 @@ function total(op) {
         result = num1 / num2;
     
 
-document.getElementById('result').innerHTML = 'Result:' + result ;
+document.getElementById('result').innerText =  result ;
        
 }

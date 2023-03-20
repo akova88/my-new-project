@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre id="heart"></pre>
+    <script>
+        let str = '';
+        for (i = 1; i < 7; i++){
+            for (j = 1; j < 8; j++){
+                if (i==1) {
+                    if ((j==2) || (j==3) || (j==5) || (j==6)) str += '* ';
+                    else str += ' ';
+                }
+                else if (i==2) {
+                    if ((j==1) || (j==4) || (j==7)) str += '* ';
+                    else str += ' ';
+                }
+                else if (i==3) {
+                    if ((j==1) || (j==7)) str += '* ';
+                    else str += ' ';
+                }
+                else if (i==4) {
+                    if ((j==2) || (j==6)) str += '* ';
+                    else str += ' ';
+                }
+                else if (i==5) {
+                    if ((j==3) || (j==5)) str += '* ';
+                    else str += ' ';
+                }
+                else if ((i==6) && (j==4)) str += '* ';
+                    else str += ' ';
+                }
+            str += '\n';
+        }
+        document.getElementById('heart').innerText=str
+    </script>
+</body>
+</html>

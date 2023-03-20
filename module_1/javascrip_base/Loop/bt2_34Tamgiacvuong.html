@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tam giác vuông</title>
+</head>
+<body>
+    <script>
+    /*-------
+    *
+    **
+    ***
+    ****
+    *****
+    */ 
+    // let str="";
+    //     for( var i = 0; i < 5; i++) {
+    //         for( var j = 0; j <= i; j++) {
+    //             str += "*";
+    //         }
+    //         str += "<br>";
+    //     }
+    // document.write(str);
+
+    /*-------
+    *****
+    ****
+    ***
+    **
+    *
+    */ 
+
+    // let str="";
+    //     for( var i = 0; i < 5; i++) {
+    //         for( var j = 0; j <= 5-1-i; j++) {
+    //             str += "* ";
+    //         }
+    //         str += "<br>";
+    //     }
+    // document.write(str);
+
+    // C2:
+    // let str="";
+    //     for( var i = 5; i >0 ; i--) {
+    //         for( var j = 0; j < i; j++) {
+    //             str += "* ";
+    //         }
+    //         str += "<br>";
+    //     }
+    // document.write(str);
+
+    /*-------
+        *
+       **
+      ***
+     ****
+    *****
+    
+    
+       let str="";
+       for ( var i = 1; i<= 5; i++) {
+        for ( var j = 1; j<= 5; j++) {
+            if (j <= 5 - i) {
+                str = `${str} +`;
+            } else {
+                str+= "* ";
+            }
+        }
+        str += "<br>";
+       }
+       document.write(str);
+        
+    */ 
+
+
+    /*-------
+    *****
+     ****
+      ***
+       **
+        *
+     
+
+    let str="";
+    for ( var i =1; i <=5; i++) {
+        for ( var j = 1; j<=5; j++) {
+            if ( j<i) {
+                str+= "+";
+            } else str+= "*";
+            
+        }
+        str+= "<br>"
+    }
+    document.write(str);
+
+*/
+/*
+Bài 4: In hình chữ nhật
+*/
+let row = "";
+var width = 22;
+var height = 8;
+
+for ( var i = 1; i<=height; i++) {
+    for( var j = 1; j<=width; j++) {
+        if( i == 1 || i == height) {
+            row += "* ";
+        } else if(j == 1 || j == width ) {
+            row += "* ";
+        } else row += "# ";
+    }
+    row += "<br>";
+}
+document.write(row);
+
+
+    
+    </script>
+</body>
+</html>

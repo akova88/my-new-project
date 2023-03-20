@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tính lãi ngân hàng</title>
+
+    
+    <style>
+        span {
+            font-size: 20px;
+            width: 200px;
+            display: inline-block;
+        }
+
+        input {
+            height: 30px;
+            width: 300px;
+        }
+    </style>
+
+</head>
+<body>
+    <h1>Tính khoản vay</h1>
+    <span>Số tiền vay: </span>
+    <input type="text" name="" id="cost" placeholder="Nhập số tiền bạn muốn vay">
+    <br> <br>
+    <span>Thời gian vay</span>
+    <select name="" id="month">
+        <option value="6">6 tháng</option>
+        <option value="12">12 tháng</option>
+        <option value="18">18 tháng</option>
+        <option value="24">24 tháng</option>
+        <option value="36">36 tháng</option>
+        <option value="60">60 tháng</option>
+    </select> <br> <br>
+    <span>Lãi suất cho vay </span>
+    <input type="text" name="" id="rate" placeholder="Nhập lãi suất % theo tháng">
+    <br> <br>
+    <span>Tổng số tiền gốc và lãi phải trả</span>
+    <input type="text" name="" id="costLoan"> <br> <br>
+    <input type="button" value="Tính toán khoản vay" onclick="tinhlai()">
+
+
+    <script>
+        function tinhlai() {
+            let amount = parseInt(document.getElementById('cost').value);
+            let time = document.getElementById('month').value;
+            let laisuat = parseFloat(document.getElementById('rate').value);
+            let sum = amount + amount*laisuat/100*time;
+
+            document.getElementById('costLoan').value = sum;
+        }
+    </script>
+</body>
+</html>
