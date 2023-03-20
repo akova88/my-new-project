@@ -49,7 +49,7 @@
         // }
         // document.write('Số đầu tiên trong dãy Fibonacci chia hết cho 5 là: ' + value);
 
-        // B6: Tính tổng của 20 số đầu tiên trong dãy fibonacci.
+        // B5: Tính tổng của 20 số đầu tiên trong dãy fibonacci.
         var sum = 0;    
         for ( var i = 0; i < 20; i++) {
             document.write(fibonacci(i) + ' +');
@@ -58,23 +58,35 @@
         document.write('=' + sum);
         */
 
+        // B6: Tính tổng 30 số đầu tiên chia hết cho 7
+        var count = 1;
+        var sum = 0;
+        for (var i = 1; i <= 30; i++) {
+           var bs = i*7;
+            sum += bs;
+           document.write(bs + ' +');
+            
+        }
+        document.write('= ' +sum);
+
+
         // B7: Viết chương trình
 
-        for ( var i = 1; i <= 100; i++) {
-            switch(true) {
-                case ( i % 3 == 0 && i % 5 == 0):
-                document.write('FizzBuzz ')
-                break;
-                case (i % 3 == 0):
-                document.write('Fizz ');
-                break;
-                case ( i % 5 == 0): 
-                document.write('Buzz ');
-                break;
-                default: 
-                document.write(i + ' ');
-            }
-        }
+        // for ( var i = 1; i <= 100; i++) {
+        //     switch(true) {
+        //         case ( i % 3 == 0 && i % 5 == 0):
+        //         document.write('FizzBuzz ')
+        //         break;
+        //         case (i % 3 == 0):
+        //         document.write('Fizz ');
+        //         break;
+        //         case ( i % 5 == 0): 
+        //         document.write('Buzz ');
+        //         break;
+        //         default: 
+        //         document.write(i + ' ');
+        //     }
+        // }
     </script>
     
 </body>
