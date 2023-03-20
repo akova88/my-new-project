@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess Number</title>
+</head>
+<body>
+<input type="button" value="PLAY" onclick="doanso()">
+
+<script>
+    function doanso() {
+    var inputNumber =+ prompt('Nhập vào khoảng muốn đoán:');
+    var guessNumber =+ prompt('Nhập số dự đoán:');
+
+    var rdNumber = Math.floor(Math.random()*inputNumber);
+    console.log(rdNumber);
+    var count = 0;
+    while ( guessNumber != rdNumber) {
+        count++;
+        if (count == 4) {
+            alert('Bạn đã hết số lần đoán');
+            break;
+        }
+        if ( guessNumber > rdNumber) {
+            alert('Số bạn đoán lớn hơn');
+        } else {
+            alert('Số bạn đoán bé hơn');
+        }
+        guessNumber =+ prompt('Nhập số dự đoán:')
+    }
+
+    if( count == 4) {
+        document.write('Bạn hết số lần đoán');
+    } else {
+        document.write('Bạn đã đoán đúng. Chúc mừng!');
+    }
+}
+    
+</script>
+
+    
+</body>
+</html>
