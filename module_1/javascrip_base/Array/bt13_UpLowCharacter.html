@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UPPER - LOWER CHARACTER</title>
+</head>
+<body>
+    <script>
+        let str = prompt('Nhập vào dãy ký tự chữ Hoa và chữ thường:')
+        let UPPER = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        let LOWER = 'abcdefghijklmnopqrstuvwxyz';
+        let result = [];
+
+        for ( var i = 0; i < str.length; i++) {
+            if ( UPPER.indexOf(str[i]) !== -1 ) {
+                result.push(LOWER[(UPPER.indexOf(str[i]))]);
+            } else if (LOWER.indexOf(str[i]) !== -1){
+                result.push(UPPER[(LOWER.indexOf(str[i]))]);
+            } else {result.push(str[i])}
+        } 
+
+        document.write(result.join(''));
+
+    </script>
+</body>
+</html>
