@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Tic Tac Toe</title>
+</head>
+
+<body>
+    <h2>Game Tic Tac Toe</h2>
+    <p id="tictactoe">
+        <input type="button" value="Change Value" onclick="changeValue()">
+
+
+        <script>
+            let b = document.getElementById('tictactoe');
+            let board = [];
+            let data = '';
+            let h = 0;
+            for (var i = 0; i < 5; i++) {
+                board[i] = new Array('_', '_', '_', '_', '_');
+            }
+
+            for (var i = 0; i < 5; i++) {
+                data += '<br/>';
+                for (var j = 0; j < 5; j++) {
+                    data += board[i][j] + '&nbsp;&nbsp;&nbsp;&nbsp;'
+                }
+            }
+            data += '<br><br><input type="button" value="Change Value" onclick="changeValue()">'
+            b.innerHTML = data;
+
+            function changeValue() {
+                data = '';
+                if (h % 2 == 0) {
+                    let positionX = prompt('Người chơi 1-Nhập tọa độ X:');
+                    let positionY = prompt('Người chơi 1-Nhập tọa độ Y:');
+                    board[positionX][positionY] = '0';
+                } else {
+                    let positionX = prompt('Người chơi 2-Nhập tọa độ X:');
+                    let positionY = prompt('Người chơi 2-Nhập tọa độ Y:');
+                    board[positionX][positionY] = 'x';
+                }
+                h++;
+
+                for (var i = 0; i < 5; i++) {
+                    data += '<br>';
+                    for (j = 0; j < 5; j++) {
+                        data += board[i][j] + '&nbsp;&nbsp;&nbsp;&nbsp;'
+                    }
+                }
+                data += '<br><br><input type="button" value="Change Value" onclick="changeValue()">';
+                b.innerHTML = data;
+
+
+                for (var i = 0; i < 5; i++) {
+                    for (var j = 0; j < 5; j++) {
+
+                        if ((board[i][j] === '0' && board[i][j + 1] === '0' && board[i][j + 2] === '0') ||
+                            (board[i][j] === '0' && board[i + 1][j] === '0' && board[i + 2][j] === '0')) {
+                            alert('Người chơi 1 thắng!')
+                        
+                        } else if (
+                            (board[i][j] === 'x' && board[i][j + 1] === 'x' && board[i][j + 2] === 'x') ||
+                            (board[i][j] === 'x' && board[i + 1][j] === 'x' && board[i + 2][j] === 'x')) {
+                            alert('Người chơi 2 thắng!')
+                            
+                        }
+
+                    }
+                }
+            }
+
+
+        </script>
+</body>
+
+</html>
