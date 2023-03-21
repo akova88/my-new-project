@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Từ điển Anh-Việt</title>
+</head>
+
+<body>
+
+    <input type="text" name="" value="" id="inputEng" placeholder="Tiếng Anh">
+    <span>=></span>
+    <input type="text" name="" value="" id="outputVn" placeholder="Tiếng Việt">
+    <input type="button" value="DỊCH" onclick="dich()">
+
+
+    <script>
+        let arr_vnLang = ['bông', 'tường', 'nước', 'lửa'];
+        let arr_engLang = ['flower', 'wall', 'water', 'fire'];
+        let result;
+        
+        function dich() {
+
+
+            let strEng = document.getElementById('inputEng').value;
+            console.log(strEng);
+
+            var index = arr_engLang.indexOf(strEng);
+            result = arr_vnLang[index];
+
+            document.getElementById('outputVn').value = result;
+
+
+        }    
+    </script>
+</body>
+
+</html>
