@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faking Text</title>
+</head>
+
+<body>
+    <h1>Type anything slowly</h1>
+    <textarea name="" id="text" cols="30" rows="10" onkeydown="typeText()"></textarea>
+
+    <script>
+        let n = '';
+        let arr = new Array();
+        arr[1] = 'T'; arr[2] = 'Ô'; arr[3] = 'I'; arr[4] = ' ';
+        arr[5] = 'H'; arr[6] = 'Ọ'; arr[7] = 'C'; arr[8] = ' ';
+        arr[9] = 'L'; arr[10] = 'Ậ'; arr[11] = 'P'; arr[12] = ' ';
+        arr[13] = 'T'; arr[14] = 'R'; arr[15] = 'Ì'; arr[16] = 'N'; arr[17] = 'H'; arr[18] = ' ';
+        arr[19] = 'J'; arr[20] = 'A'; arr[21] = 'V'; arr[22] = 'A';
+
+        function typeText() {
+            h = document.getElementById('text').value;
+            console.log(h);
+            let j = h.length;
+            if (j > 0) {
+                for (var i = 1; i <= j; i++) {
+                
+                    n += arr[i];
+                    if ( i == 23) {
+                        document.getElementById('text').value = '';
+                        n = '';
+                    }
+                }
+                }
+        document.getElementById('text').value = n;
+        n = '';
+
+        setTimeout('typeText()',1);
+        }
+    </script>
+</body>
+
+</html>
