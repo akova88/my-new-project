@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 8</title>
+</head>
+<body>
+
+    <script>
+        let arr = new Array(10);
+        for ( var i = 0; i < 10; i++) {
+            arr[i] = Math.floor(Math.random()*11);
+        }
+        document.write(`Mảng: [${arr}] <br>`);
+        
+
+        for (var i = 0; i < 9; i++) {
+            for (var j = i+1; j< 10; j++) {
+            if (arr[i] < arr[j]) {
+                var temp = arr[i];
+                arr[i] = arr[j];
+                arr[j] = temp;
+            }
+        }
+    }
+    document.write(`Mảng sắp xếp giảm dần: [${arr}]`);
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        let arr = new Array(10);
+        for ( i = 0; i < 10; i++) {
+            arr[i] = parseInt(prompt('Nhập phần tử ' + i));
+        }
+
+        document.write(`Mảng đã tạo: [${arr}] <br>`);
+        let v = parseInt(prompt('Nhập vào số cần kiểm tra:'));
+        var kt = false;
+
+        for ( var j = 0; j < 10; j++) {
+            if (arr[j] == v ){
+                 kt = true;
+                 for (var k = j; k <10; k++) {
+                    arr[k] = arr[k+1];   
+                 }
+                 arr[9] = 0;
+            }
+        }
+
+        if (kt) {
+            document.write(`${v} is in the array <br>`);
+
+        } else document.write(`${v} is not in the array <br>`);
+
+        document.write(arr);
+
+    </script>
+    
+</body>
+</html>

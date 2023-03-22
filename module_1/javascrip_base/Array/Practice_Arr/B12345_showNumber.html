@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show Number</title>
+</head>
+
+<body>
+
+    <script>
+
+        // Bài 1:
+        // let arr = new Array(10);
+        // let count = 0;
+
+        // for ( var i = 0; i < 10; i++) {
+        //     arr[i] = Math.floor((Math.random())*15);
+        //     if ( arr[i] >= 10) {
+        //         count++;
+        //     }
+        // }
+        // document.write('Mảng ' + '[' +arr + ']' + ' có ' + count + ' số nguyên >= 10'); 
+
+        // Bài 2:
+        // let arr = new Array(10);
+
+
+        // for (var i = 0; i < 10; i++) {
+        //     arr[i] = Math.floor((Math.random()) * 15);
+        // }
+        // // console.log(arr);
+        // let max = arr[0];
+        // for (var j = 0; j < arr.length; j++) {
+        //     if (arr[j] > max) {
+        //         max = arr[j];
+        //         var index = j;
+        //     }
+        // }
+        // document.write(`Mảng [${arr}] ở vị trí ${index} có số lớn nhất là: ${max}`);
+
+        // Bài 3:
+        // let arr = new Array(10);
+
+        // for (var i = 0; i < 10; i++) {
+        //     arr[i] = Math.floor((Math.random()) * 15);
+        // }
+        // document.write(`Mảng: [${arr}] <br>`);
+        // let max = arr[0];
+        // let sum = 0;
+
+        // for (var j = 0; j < arr.length; j++) {
+        //     if (arr[j] > max) {
+        //         max = arr[j];   
+        //     }
+        //     sum += arr[j];
+        // }
+        // let medium = sum / arr.length;
+        // console.log(sum);
+        // document.write(`Giá trị max = ${max},<br> Giá trị Tb = ${medium}`);
+
+// Bài 4: Đảo ngược mảng
+
+// let arr = new Array(10);
+
+//         for (var i = 0; i < 10; i++) {
+//             arr[i] = Math.floor((Math.random()) * 15);
+//         }
+//         document.write(`Mảng: [${arr}] <br>`);
+//         let begin = 0;
+//         let end = arr.length-1;
+//         let temp;
+
+//         for (var j = 0; j < arr.length; j++) {
+//             if ( begin < end) {
+//                 temp = arr[begin];
+//                 arr[begin] = arr[end];
+//                 arr[end] = temp;
+//                 begin++;
+//                 end--;
+
+//             }
+//         }
+//         document.write(`Mảng sau khi đảo ngược: [${arr}]`)
+
+// Bài 5:
+        let arr = [1, -7, 4, -2, 15, -43];
+        let count = 0;
+
+        for ( var i = 0; i < arr.length; i++) {
+            while (arr[i] < 0) {
+                count++;
+                break;
+            }
+        }
+        document.write(`Mảng [${arr}] có ${count} số nguyên âm`);
+
+    </script>
+
+</body>
+
+</html>
