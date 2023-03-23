@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Count number in Array</title>
+</head>
+<body>
+
+    <script>
+        let arr = ['a', '1',' b', '2', 'c', '3', '8' ,'6'];
+        let count = 0;
+
+        for ( var i = 0; i< arr.length; i++) {
+            if (!isNaN(arr[i])) {
+                count++;
+            }
+        }
+
+        document.write('Số ký tự số trong mảng là:' + count);
+
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kiểm tra 2 chuỗi có giống nhau</title>
+</head>
+<body>
+
+    <script>
+        let a = prompt('Nhập vào chuỗi A:');
+        let b = prompt('Nhập vào chuỗi B:');
+
+        let characterA = a.split('');
+        let characterB = b.split('');
+        let count = 0;
+
+        document.write(`Mảng các ký tự chuỗi A: [${characterA}]<br>`);
+        document.write(`Mảng các ký tự chuỗi B: [${characterB}]<br>`);
+        if ( characterA.length == characterB.length) {
+            for ( var i = 0; i < characterA.length; i++) {
+            if ( characterA[i] == characterB[i]) {
+                count++;
+            }
+        }
+            if ( count == characterA.length) {
+                document.write('Hai chuỗi A và B giống nhau');
+            } else document.write('Hai chuỗi A và B không giống nhau');
+         
+        } else document.write('Hai chuỗi A và B không giống nhau');
+        
+    </script>
+    
+</body>
+</html>
