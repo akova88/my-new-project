@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function isPrime</title>
+</head>
+<body>
+    <script>
+
+        function isPrime(number) {
+                let isPrime = true;
+                if (number <= 1) {
+                    isPrime = false;
+                }
+
+                for (var i = 2; i < number - 1; i++) {
+                    if (number % i == 0) {
+                        isPrime = false;
+                    }
+                }
+                return isPrime;
+            }
+
+
+            let number = + prompt('Nhập số nguyên dương N < 10000:');
+            if (isPrime(number)) {
+                alert('N is Prime!');
+            } else alert('N is not Prime!');
+
+            for ( var i = 1; i <= number; i++) {
+                if(isPrime(i)) {
+                    document.write(i+', ');
+                }
+            }
+        
+    </script>
+</body>
+</html>
