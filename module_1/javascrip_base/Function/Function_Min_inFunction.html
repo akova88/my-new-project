@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tìm giá trị Min trong Array</title>
+</head>
+<body>
+    <script>
+        function findMin_inArray (arr) {
+            if ( arr.length == 0) {
+                return -1;
+            }
+            let min = arr[0];
+            let index;
+            for ( var i = 0; i < arr.length ; i++) {
+                if ( arr[i] < min) {
+                    min = arr[i];
+                    index = i;
+                }
+            }
+            return arr[index];
+        }
+
+        let arr1 = [3, 5, 1, 8, -3, 7, 8];
+
+        let arr2 = [7, 12, 6, 9, 20, 56, 89];
+
+        let arr3 = [];
+
+        let arr4 = [0, 0, 0, 0, 0, -1];
+
+
+        document.write(`Giá trị nhỏ nhất của mảng 1: [${arr1}]<br>Min = ${findMin_inArray(arr1)}<br>`);
+        document.write(`Giá trị nhỏ nhất của mảng 2: [${arr2}]<br>Min = ${findMin_inArray(arr2)}<br>`);
+        document.write(`Giá trị nhỏ nhất của mảng 3: [${arr3}]<br>Min = ${findMin_inArray(arr3)}<br>`);
+        document.write(`Giá trị nhỏ nhất của mảng 4: [${arr4}]<br>Min = ${findMin_inArray(arr4)}<br>`);
+    </script>
+</body>
+</html>
