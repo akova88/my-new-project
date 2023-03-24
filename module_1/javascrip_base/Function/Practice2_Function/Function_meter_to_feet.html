@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meters to Feet</title>
+
+    <style>
+        span {
+            font-size: 18px;
+            font-weight: 500;
+            color: aliceblue;
+        }
+        div {
+            width: 200px;
+            height: 60px;
+            background-color: gray;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+        span {
+            width: 60px;
+            display: inline-block;
+        }
+        input {
+            border-radius: 5px;
+            width: 100%;
+            height: 30px;
+        }
+
+        button {
+            margin-left: 100px;
+            margin-bottom: 20px;
+            width: 80px;
+            height: 30px;
+            border-style: none;
+            border-radius: 5px;
+            background-color: aquamarine;
+            box-shadow: 2px 2px 2px 2px #3333;
+        }
+        button:hover {
+            background-color: rgb(112, 233, 192);
+            cursor: pointer;
+            box-shadow: 4px 4px 4px 4px #5555;
+        }
+    </style>
+</head>
+<body>
+    <h2>Feet to Meters Converter</h2>
+    <form action="">
+        <div>
+            <span>Feet</span>
+            <input type="number" id="ipFoot" oninput="footToMeter(this.value)" onchange="footToMeter(this.value)">
+        </div>
+        <button id="convert" onclick="footToMeter()">Chuyển</button>
+
+
+        <div>
+            <span>Meters</span>
+            <input type="text" id="ipMeter" oninput="meterToFoot(this.value)" onchange="meterToFoot(this.value)">
+        </div>
+
+    </form>
+    
+
+
+    <script>
+        function footToMeter(foot) {
+            // console.log(el.value);
+           document.getElementById('ipMeter').value = 0.305*foot;
+        }
+
+        function meterToFoot(meter) {
+            document.getElementById('ipFoot').value = 3.279*meter;
+        }
+
+    
+
+    </script>
+</body>
+</html>
