@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palindrome Function</title>
+</head>
+
+<body>
+    <script>
+        let strA = 'abcddcba';
+        let strB = 'motor';
+
+        function isPalindrome(s) {
+            let check = true;
+            for (var i = 0; i < s.length / 2; i++) {
+                if (s[i] != s[s.length - 1 - i]) {
+                    check = false;
+                    break;
+                } else {
+                    check = true;
+                }
+            }
+            return check;
+        }
+
+        document.write(isPalindrome(strA));
+        document.write(isPalindrome(strB));
+
+
+    </script>
+</body>
+
+</html>
