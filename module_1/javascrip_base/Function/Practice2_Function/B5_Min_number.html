@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Min</title>
+</head>
+<body>
+    <script>
+        function findMin(a ,b ,c) {
+            var min = a;
+            b < a ? min = b : c < a ? min = c : min = a;
+            return min;
+        }
+        console.log(findMin(4,0,12));
+    </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reverse</title>
+</head>
+<body>
+    <script>
+        var arr = new Array(10);
+        for ( var i = 0; i < arr.length; i++) {
+            arr[i] = Math.floor(Math.random()*100);
+        }
+        document.write(`Mảng khởi tạo: [${arr}] <br>`);
+        
+        function reverseArr(a) {
+            var first = 0;
+            var last = a.length-1;
+
+            for ( var i = 0; i < a.length; i++) {
+                if ( first < last) {
+                    let temp = a[first];
+                    a[first] = a[last];
+                    a[last] = temp;
+                    first++;
+                    last--;
+                } 
+            }
+           return a;
+        }
+
+        document.write(`Mảng đảo ngược: [${reverseArr(arr)}]`);
+
+    </script>
+</body>
+</html>

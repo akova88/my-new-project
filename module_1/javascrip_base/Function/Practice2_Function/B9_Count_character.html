@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đếm số ký tự xuất hiện trong mảng</title>
+</head>
+<body>
+    <script>
+
+        let arr = [1, 2, 3, 'a', 'c', 'c', 1, 2, 3, 'd', 6, 7, 5, 'g'];
+        let charac = '4';
+
+        function check_Character(arr,item) {
+            var count = 0;
+            for ( var i = 0; i < arr.length; i++) {
+                if ( arr[i] == item) {
+                    count ++;
+                } 
+            }
+            if (count == 0) {
+                count = -1;
+            }
+      
+
+            return count;
+        }
+        document.write(check_Character(arr,charac));
+
+    </script>
+</body>
+</html>
