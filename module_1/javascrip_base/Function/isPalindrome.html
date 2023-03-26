@@ -13,17 +13,26 @@
         let strA = 'abcddcba';
         let strB = 'motor';
 
+        // function isPalindrome(s) {
+        //     let check = true;
+        //     for (var i = 0; i < s.length / 2; i++) {
+        //         if (s[i] != s[s.length - 1 - i]) {
+        //             check = false;
+        //             break;
+        //         } else {
+        //             check = true;
+        //         }
+        //     }
+        //     return check;
+        // }
+
         function isPalindrome(s) {
-            let check = true;
-            for (var i = 0; i < s.length / 2; i++) {
-                if (s[i] != s[s.length - 1 - i]) {
-                    check = false;
-                    break;
-                } else {
-                    check = true;
-                }
-            }
-            return check;
+            if ( s.length < 2) {
+                return true;
+            } else if ( s[0] != s[s.length-1] ) {
+                return false;
+            } else
+            return isPalindrome(s.slice(1,-1));
         }
 
         document.write(isPalindrome(strA));

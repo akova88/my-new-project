@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product manager</title>
+    <style>
+        form {
+            background-color: darkolivegreen;
+            width: 400px;
+            height: 80px;
+            border-radius: 4px;
+        }
+        input {
+            width: 300px;
+            height: 30px;
+            margin: 20px 10px;
+            
+        }
+        button {
+            width: 60px;
+            height: 30px;
+            
+        }
+    </style>
+</head>
+<body>
+
+    <h3>Add New Product</h3>
+    <div>
+        <input id="newProduct" type="text" placeholder="New Product">
+        <button onclick="addProduct()">Add</button>
+    </div>
+    <h3>Display All Product</h3>
+    <span id="totalProducts">Product Name</span>
+    <p id="totalProducts"></p>
+    <!-- <button onclick="showAllProducts()">Show</button> -->
+    <!-- <button onclick="addProduct()">Add</button> -->
+    <table id="products">
+        <tr> 
+            <td>Sony Xperia</td>
+            <td><button onclick="editProduct()">Edit</button></td>
+            <td><button onclick="deleteProduct()">Delete</button></td> 
+        </tr>
+    </table>
+    
+
+    <script src="App_Manager_Product.js"></script>
+</body>
+</html>
