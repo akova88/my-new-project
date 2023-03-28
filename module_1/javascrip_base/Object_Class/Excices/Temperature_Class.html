@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature Class</title>
+</head>
+
+<body>
+    <script>
+        class Temperature {
+            constructor(doC) {
+                this.doC = doC;
+            }
+            getTempe() {
+                return this.doC = doC;
+            }
+            setTempe() {
+                this.doC = doC;
+            }
+            getConvertF() {
+                return this.doC*9/5 + 32;
+            }
+            getConvertK() {
+                return this.doC + 273.15;
+            }
+        }
+        let nowTemperature = new Temperature(0);
+        console.log(nowTemperature.doC);
+        console.log(nowTemperature.getConvertF());
+        console.log(nowTemperature.getConvertK());
+    </script>
+</body>
+
+</html>
