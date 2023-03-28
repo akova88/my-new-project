@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phone Class</title>
+</head>
+<body>
+   <script>
+    class Phone {
+        constructor() {
+            this.battery = 100;
+            this.drafts = [];
+            this.inbox = [];
+            this.sent = [];
+            this.poweredOn = false;
+        }
+        checkPowerStatus() {
+            return this.powerdOn;               //Kiểm tra on/off
+        }
+        powerOn() {
+            this.poweredOn = true;              // bật đt
+            this.reduceBattery();
+        }
+        powerOff() {
+            this.poweredOn = false;             // tắt đt
+            this.reduceBattery();
+        }
+        chargeBattery() { 
+            this.battery = 100;                 // sạc pin
+        }
+        createDrafts(message) {                 // soạn tin nhắn
+            if (!this.poweredOn) return;        // kiểm tra đt 
+            this.drafts.push(message);          // lưu tn vào đang soạn
+            this.reduceBattery()
+            return message;
+        }
+        receiveMessage(message) {               // nhận tin nhắn
+            if (!this.poweredOn) return;        // lưu tn vào hộp thư đến
+            this.inbox.push(message);
+            this.reduceBattery();
+        }
+
+        sendMessage(recipient) {        // gửi tn
+            if(!this.poweredOn) return;
+            recipient.receiveMessage(this.drafts); // người nhận --> nhận tin nhắn 
+            this.sent.push(this.drafts);            // lưu vào hộp thư đã gửi
+            this.reduceBattery();
+        }
+
+        viewInbox() {
+            if(!this.poweredOn) return;
+            return this.inbox;
+        }
+        viewSent() {
+            if(!this.poweredOn) return;
+            return this.sent;
+        }
+
+        reduceBattery() {
+            this.battery -= 1;
+        }
+    }
+
+    let nokiaPhone = new Phone();
+    let iPhone = new Phone();
+
+    nokiaPhone.powerOn();
+    iPhone.powerOn();
+    document.write(nokiaPhone.createDrafts('hi, tôi là nokia!'));
+    nokiaPhone.sendMessage(iPhone);
+    document.write(iPhone.inbox[0]);
+   </script> 
+</body>
+</html>
