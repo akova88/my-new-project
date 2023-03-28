@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RectAngle Class</title>
+</head>
+
+<body>
+    <canvas id="myCanvas" width="300px" height="200px"></canvas>
+    <script>
+        class RectAngle {
+            constructor(width, height) {
+                this.width = width;
+                this.height = height;
+            }
+            getWidth() {
+                return this.width;
+            }
+            getHeight() {
+                return this.height;
+            }
+            setWidth() {
+                this.width = width;
+            }
+            setHeight() {
+                this.height = height;
+            }
+            getArea() {
+                return this.width*this.height;
+            }
+            getPerimeter() {
+                return (this.width + this.height)*2;
+            }
+        }
+    let myRectangle = new RectAngle(150,50);
+
+    let canvas = document.getElementById('myCanvas');
+    let ctx = canvas.getContext('2d');
+    ctx.fillStyle='#fa4b2a';
+    ctx.fillRect(10,10,myRectangle.width,myRectangle.height)
+
+   let myRectangle1 = new RectAngle(150,50);
+   ctx.fillRect(40,70,myRectangle1.width,myRectangle1.height)
+   let myRectangle2 = new RectAngle(150,50);
+   ctx.fillRect(70,130,myRectangle1.width,myRectangle1.height)
+   let myRectangle3 = new RectAngle(150,50);
+   ctx.fillRect(100,190,myRectangle1.width,myRectangle1.height)
+   let myRectangle4 = new RectAngle(150,50);
+   ctx.fillRect(40,70,myRectangle1.width,myRectangle1.height)
+
+
+    </script>
+</body>
+
+</html>
