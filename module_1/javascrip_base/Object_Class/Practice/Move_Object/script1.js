@@ -3,7 +3,7 @@ function Hero(image, top, left, size) {
     this.top = top;
     this.left = left;
     this.size = size;
-    this.speed = 20;
+    this.speed = 10;
     this.direction = "right";
   
     this.getHeroElement = function() {
@@ -73,7 +73,7 @@ function Hero(image, top, left, size) {
     }
   
     document.getElementById('game').innerHTML = hero.getHeroElement();
-    setTimeout(start, 50)
+    setTimeout(start, 100)
   }
   
   document.onkeydown = function(e) {

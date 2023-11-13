@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Mouse {
+            status;
+            sound_mouse;
+            constructor(name, weight, speed) {
+                this.name = name;
+                this.weight = weight;
+                this.speed = speed;
+            }
+
+            getStatus() {
+                this.status ? alert("Chuột sống!") : alert("Chuột chết!");
+            }
+
+            die() {
+                return this.status = false;
+            }
+
+            noDie() {
+                return this.status = true;
+            }
+
+            actionMouse(sound) {
+                this.sound_mouse = sound;
+                alert(this.sound_mouse);
+            }
+        }
+
+        class Cat {
+            sound;
+            constructor(name, weight, speed) {
+                this.name = name;
+                this.weight = weight;
+                this.speed = speed;
+            }
+
+            getName() {
+                return this.name;
+            }
+
+            getWeightCat() {
+                return this.weight;
+            }
+
+            setSoundCat(sound) {
+                this.sound = sound;
+            }
+
+            getSoundCat() {
+                alert(this.sound);
+            }
+
+            catchTheMouse() {
+                this.mouse.speed < this.cat.speed ? alert("Mèo đã bắt được chuột") : alert("Mèo không bắt được chuột");
+            }
+
+            eatTheMouse(mouse) {
+                if(mouse.status) {
+                    this.weight += mouse.weight;
+                }
+            }
+        }
+
+        let Jerry = new Mouse("Jerry", 10, 100);
+        let Tom = new Cat("Tom", 20, 200, Jerry);
+
+        Jerry.noDie();
+
+        Tom.eatTheMouse(Jerry);
+        console.log(`Cân nặng mèo ${Tom.getName()} là: ${Tom.getWeightCat()}`);
+    </script>
+</body>
+</html>
