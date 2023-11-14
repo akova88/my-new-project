@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Remote {
+            constructor(id, tv) {
+                this.id = id;
+                this.tv = tv
+            }
+
+            setChanel(channel) {
+                this.tv.channel = channel
+            }
+
+            setVolume(volume) {
+                this.tv.volume = volume;
+            }
+        }
+
+        class Tv {
+            status;
+            constructor(channel, volume) {
+                this.channel = channel;
+                this.volume = volume;
+            }
+
+            getStatus() {
+                this.status ? alert("TV ON") : alert("TV OFF");
+            }
+
+            turnOn() {
+                return this.status = true;
+            }
+
+            turnOff() {
+                return this.status = false;
+            }
+
+            getChannelTv() {
+                return this.channel;
+            }
+
+            getVolumeTv() {
+                return this.volume;
+            }
+
+            setChannel(channel) {
+                this.channel = channel;
+            }
+
+            setVolume(volume) {
+                this.volume = volume;
+            }
+        }
+
+        let Sony = new Tv(1, 20);
+        let remote = new Remote(1, Sony);
+
+        Sony.turnOn();
+        Sony.getStatus();
+        console.log(Sony.getChannelTv());
+
+        remote.setChanel(5);
+        remote.setVolume(30);
+        console.log(Sony.getChannelTv());
+        console.log(Sony.getVolumeTv());
+    </script>
+</body>
+</html>
